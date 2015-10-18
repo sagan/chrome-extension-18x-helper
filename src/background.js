@@ -1,12 +1,15 @@
 
 var cookies = {
+    // general sites
 	'www.dlsite.com': [{path: '/', name: 'adultchecked', value: '1'}],
 	'www.getchu.com': [{path: '/', name: 'getchu_adalt_flag', value: 'getchu.com'}],
 	'www.dmm.co.jp': [{path: '/', name: 'setover18', value: '1'}],
 	'www.dmm.com': [{domain: 'dmm.com', path: '/', name: 'ckcy', value: '1'}],
     'dmm.com': [{domain: 'dmm.com', path: '/', name: 'ckcy', value: '1'}],
-    's-mi-le.com': [{domain: 's-mi-le.com', path: '/', name: 'modal', value: 'off'}], // スミレ
+    'gyutto.com': [{domain: 'gyutto.com', path: '/', name: 'adult_check_flag', value: '1'}],
     'www.digiket.com': [{domain: 'digiket.com', path: '/', name: 'adult_check', value: '1'}],
+    // brands sites
+    's-mi-le.com': [{domain: 's-mi-le.com', path: '/', name: 'modal', value: 'off'}], // スミレ
 };
 
 // see https://stackoverflow.com/questions/3689423/google-chrome-plugin-how-to-get-domain-from-url-tab-url
