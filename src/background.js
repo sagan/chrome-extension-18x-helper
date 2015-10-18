@@ -5,6 +5,7 @@ var cookies = {
 	'www.dmm.co.jp': [{path: '/', name: 'setover18', value: '1'}],
 	'www.dmm.com': [{domain: 'dmm.com', path: '/', name: 'ckcy', value: '1'}],
     'dmm.com': [{domain: 'dmm.com', path: '/', name: 'ckcy', value: '1'}],
+    's-mi-le.com': [{domain: 's-mi-le.com', path: '/', name: 'modal', value: 'off'}], // スミレ
     'www.digiket.com': [{domain: 'digiket.com', path: '/', name: 'adult_check', value: '1'}],
 };
 
