@@ -1,12 +1,15 @@
 
 var cookies = {
     // general sites
-    'www.dlsite.com': [{domain: 'dlsite.com', path: '/', name: 'adultchecked', value: '1'}],
-    'www.getchu.com': [{domain: 'getchu.com', path: '/', name: 'getchu_adalt_flag', value: 'getchu.com'}],
+    'dlsite.com': [{domain: 'dlsite.com', path: '/', name: 'adultchecked', value: '1'}],
+    'getchu.com': [
+        {domain: 'getchu.com', path: '/', name: 'getchu_adalt_flag', value: 'getchu.com'},
+        {domain: 'getchu.com', path: '/', name: 'ADULT_GATE', value: '1'}
+    ],
     'dmm.co.jp': [{domain: 'dmm.co.jp', path: '/', name: 'setover18', value: '1'}],
     'dmm.com': [{domain: 'dmm.com', path: '/', name: 'ckcy', value: '1'}],
     'gyutto.com': [{domain: 'gyutto.com', path: '/', name: 'adult_check_flag', value: '1'}],
-    'www.digiket.com': [{domain: 'digiket.com', path: '/', name: 'adult_check', value: '1'}],
+    'digiket.com': [{domain: 'digiket.com', path: '/', name: 'adult_check', value: '1'}],
     'toranoana.jp': [{domain: 'toranoana.jp', path: '/', name: 'afg', value: '0'}], //とらのあな
     'ura-akiba.jp': [{domain: 'ura-akiba.jp', path: '/', name: 'auth', value: '1'}], //うらあきば.じぇいぴ～
     

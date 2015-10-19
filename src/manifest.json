@@ -1,7 +1,7 @@
 {
   "name": "年齢確認ヘルパー",
   "description": "Automatically and silently confirm the age of majority prompt in some Japanese adult content sites like Getchu, DMM, DLSite and etc.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Jacques De SAGAN",
   "manifest_version": 2,
   "permissions": ["cookies", "webRequest", "webRequestBlocking", "*://*/*"],
