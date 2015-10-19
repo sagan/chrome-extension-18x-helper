@@ -26,33 +26,23 @@ function getOrigin(uri) {
     return uri.match(/^[\w-]+:\/*\[?([\w\.:-]+)\]?(?::\d+)?/)[0];
 };
 
+function getTopDomain(domain) {
+    var index = domain.indexOf('.');
+    return (index != -1) ? ( domain.substr(index + 1) ) : "";
+}
+
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
     var domain = getDomain(details.url);
-    var matchedDomain;
-    
-    if( domain ) {
-        if( cookies[domain] ) {
-            matchedDomain = domain;
-        } else {
-            var parts = domain.split('.');
-            if( parts.length > 2 ) {
-                parts.splice(0,1);
-                domain = parts.join('.');
-                if( cookies[domain]) {
-                    matchedDomain = domain;
-                }
-            }
-        }
-    }
+    var matchedDomain = cookies[domain] || cookies[getTopDomain(domain)];
     
     if( matchedDomain ) {
-        for(var i = 0; i < cookies[matchedDomain].length; i++) {
+        for(var i = 0; i < matchedDomain.length; i++) {
             chrome.cookies.set({
                 url: details.url,
-                domain: cookies[matchedDomain][i].domain,
-                name: cookies[matchedDomain][i].name,
-                path: cookies[matchedDomain][i].path,
-                value: cookies[matchedDomain][i].value,
+                domain: matchedDomain[i].domain,
+                name: matchedDomain[i].name,
+                path: matchedDomain[i].path,
+                value: matchedDomain[i].value,
             }, function() {}); 
         }
     }
