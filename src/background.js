@@ -3,6 +3,7 @@ var cookies = {
     // general sites
     'dlsite.com': [{domain: 'dlsite.com', path: '/', name: 'adultchecked', value: '1'}],
     'nijiyome.jp': [{domain: 'nijiyome.jp', path: '/', name: 'adultcheck', value: '1'}],
+    'melonbooks.co.jp': [{domain: 'melonbooks.co.jp', path: '/', name: 'AUTH_ADULT', value: '1'}],
     'getchu.com': [
         {domain: 'getchu.com', path: '/', name: 'getchu_adalt_flag', value: 'getchu.com'},
         {domain: 'getchu.com', path: '/', name: 'ADULT_GATE', value: '1'}
