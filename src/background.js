@@ -8,6 +8,10 @@ var cookies = {
         {domain: 'getchu.com', path: '/', name: 'getchu_adalt_flag', value: 'getchu.com'},
         {domain: 'getchu.com', path: '/', name: 'ADULT_GATE', value: '1'}
     ],
+    'yodobashi.com': [
+        {domain: 'yodobashi.com', path: '/', name: 'contentFilterLevel', value: '2'},
+        {domain: 'yodobashi.com', path: '/', name: 'contentFilterLevelValue', value: '2'}
+    ],
     'dmm.co.jp': [{domain: 'dmm.co.jp', path: '/', name: 'setover18', value: '1'}],
     'dmm.com': [{domain: 'dmm.com', path: '/', name: 'ckcy', value: '1'}],
     'gyutto.com': [{domain: 'gyutto.com', path: '/', name: 'adult_check_flag', value: '1'}],
