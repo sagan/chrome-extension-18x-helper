@@ -14,6 +14,7 @@ var cookies = {
         {domain: 'yodobashi.com', path: '/', name: 'contentFilterLevelValue', value: '2'}
     ],
     'dmm.co.jp': [{domain: 'dmm.co.jp', path: '/', name: 'setover18', value: '1'}],
+    'mgstage.com': [{domain: 'mgstage.com', path: '/', name: 'adc', value: '1'}],
     'dmm.com': [{domain: 'dmm.com', path: '/', name: 'ckcy', value: '1'}],
     'gyutto.com': [{domain: 'gyutto.com', path: '/', name: 'adult_check_flag', value: '1'}],
     'digiket.com': [{domain: 'digiket.com', path: '/', name: 'adult_check', value: '1'}],
