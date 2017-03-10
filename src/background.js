@@ -2,17 +2,25 @@
 var cookies = {
     // general sites
     'dlsite.com': [{domain: 'dlsite.com', path: '/', name: 'adultchecked', value: '1'}],
+    'nijiyome.jp': [{domain: 'nijiyome.jp', path: '/', name: 'adultcheck', value: '1'}],
+    'melonbooks.co.jp': [{domain: 'melonbooks.co.jp', path: '/', name: 'AUTH_ADULT', value: '1'}],
+    's-cute.com': [{domain: 's-cute.com', path: '/', name: 'over18', value: '1'}],
     'getchu.com': [
         {domain: 'getchu.com', path: '/', name: 'getchu_adalt_flag', value: 'getchu.com'},
         {domain: 'getchu.com', path: '/', name: 'ADULT_GATE', value: '1'}
     ],
+    'yodobashi.com': [
+        {domain: 'yodobashi.com', path: '/', name: 'contentFilterLevel', value: '2'},
+        {domain: 'yodobashi.com', path: '/', name: 'contentFilterLevelValue', value: '2'}
+    ],
     'dmm.co.jp': [{domain: 'dmm.co.jp', path: '/', name: 'setover18', value: '1'}],
+    'mgstage.com': [{domain: 'mgstage.com', path: '/', name: 'adc', value: '1'}],
     'dmm.com': [{domain: 'dmm.com', path: '/', name: 'ckcy', value: '1'}],
     'gyutto.com': [{domain: 'gyutto.com', path: '/', name: 'adult_check_flag', value: '1'}],
     'digiket.com': [{domain: 'digiket.com', path: '/', name: 'adult_check', value: '1'}],
     'toranoana.jp': [{domain: 'toranoana.jp', path: '/', name: 'afg', value: '0'}], //とらのあな
     'ura-akiba.jp': [{domain: 'ura-akiba.jp', path: '/', name: 'auth', value: '1'}], //うらあきば.じぇいぴ～
-	'syosetu.com': [{domain: 'syosetu.com', path: '/', name: 'over18', value: 'yes'}],
+    'syosetu.com': [{domain: 'syosetu.com', path: '/', name: 'over18', value: 'yes'}],
     
     // brands sites
     's-mi-le.com': [{domain: 's-mi-le.com', path: '/', name: 'modal', value: 'off'}], // スミレ
