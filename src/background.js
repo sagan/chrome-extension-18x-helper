@@ -1,5 +1,5 @@
 
-var cookies = {
+let cookies = {
     // general sites
     'dlsite.com': [{domain: 'dlsite.com', path: '/', name: 'adultchecked', value: '1'}],
     'nijiyome.jp': [{domain: 'nijiyome.jp', path: '/', name: 'adultcheck', value: '1'}],
@@ -39,16 +39,16 @@ function getOrigin(uri) {
 };
 
 function getTopDomain(domain) {
-    var index = domain.indexOf('.');
+    let index = domain.indexOf('.');
     return (index != -1) ? ( domain.substr(index + 1) ) : "";
 }
 
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
-    var domain = getDomain(details.url);
-    var matchedDomain = cookies[domain] || cookies[getTopDomain(domain)];
+    let domain = getDomain(details.url);
+    let matchedDomain = cookies[domain] || cookies[getTopDomain(domain)];
     
     if( matchedDomain ) {
-        for(var i = 0; i < matchedDomain.length; i++) {
+        for(let i = 0; i < matchedDomain.length; i++) {
             chrome.cookies.set({
                 url: details.url,
                 domain: matchedDomain[i].domain,
@@ -60,3 +60,29 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
     }
 }, {urls: ["<all_urls>"], types: ["main_frame"]}, ["blocking"]);
 
+chrome.webRequest.onBeforeSendHeaders.addListener(function({url, requestHeaders}) {
+    let domain = getDomain(url);
+    let matchedDomain = cookies[domain] || cookies[getTopDomain(domain)];
+
+    if( matchedDomain ) {
+        let cookieHeader;
+        for(let i = 0; i < requestHeaders.length; i++) {
+            if( requestHeaders[i].name.toLowerCase() == 'cookie' ) {
+                cookieHeader = requestHeaders[i];
+                break;
+            }
+        }
+        if( cookieHeader ) {
+            for(let i = 0; i < matchedDomain.length; i++) {
+                if( !cookieHeader.match(new RegExp(`(^|;|\\s)${matchedDomain[i].name}=`)) ) {
+                    cookieHeader.value += `; ${matchedDomain[i].name}=${matchedDomain[i].value}`;
+                }
+            }
+        } else {
+            requestHeaders.push({name: 'Cookie',
+                value: matchedDomain.map(cookie => `${cookie.name}=${cookie.value}`).join('; ')});
+        }
+
+        return {requestHeaders};
+    }
+}, {urls: ["<all_urls>"], types: ["main_frame"]}, ["blocking", "requestHeaders"]);
