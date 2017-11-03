@@ -1,5 +1,9 @@
 
 let cookies = {
+    // av
+    'video.fc2.com': [{domain: 'video.fc2.com', path: '/', name: '_ac', value: '1'}],
+    'amiami.jp': [{domain: 'amiami.jp', path: '/', name: 'age_confirm', value: 'true'}],
+
     // general sites
     'dlsite.com': [{domain: 'dlsite.com', path: '/', name: 'adultchecked', value: '1'}],
     'nijiyome.jp': [{domain: 'nijiyome.jp', path: '/', name: 'adultcheck', value: '1'}],
