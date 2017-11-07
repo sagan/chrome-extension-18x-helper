@@ -3,6 +3,7 @@ let cookies = {
     // av
     'video.fc2.com': [{domain: 'video.fc2.com', path: '/', name: '_ac', value: '1'}],
     'amiami.jp': [{domain: 'amiami.jp', path: '/', name: 'age_confirm', value: 'true'}],
+    'oshiete.goo.ne.jp': [{domain: 'oshiete.goo.ne.jp', path: '/', name: 'adult_filter', value: '1'}],
 
     // general sites
     'dlsite.com': [{domain: 'dlsite.com', path: '/', name: 'adultchecked', value: '1'}],
