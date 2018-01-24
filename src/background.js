@@ -30,6 +30,7 @@ let cookies = {
 
     // brands sites
     's-mi-le.com': [{domain: 's-mi-le.com', path: '/', name: 'modal', value: 'off'}], // スミレ
+    'www.web-marmalade.com': [{domain: 'www.web-marmalade.com', path: '/', name: 'modal', value: 'off'}],
 //  '': [{domain: '', path: '/', name: '', value: '1'}],
 };
 
