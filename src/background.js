@@ -27,6 +27,7 @@ let cookies = {
     'ura-akiba.jp': [{domain: 'ura-akiba.jp', path: '/', name: 'auth', value: '1'}], //うらあきば.じぇいぴ～
     'syosetu.com': [{domain: 'syosetu.com', path: '/', name: 'over18', value: 'yes'}],
     'booth.pm': [{domain: 'booth.pm', path: '/', name: 'adult', value: 't'}],
+    'digbook.jp': [{domain: 'digbook.jp', path: '/', name: 'adult_check', value: 'true'}],
 
     // brands sites
     's-mi-le.com': [{domain: 's-mi-le.com', path: '/', name: 'modal', value: 'off'}], // スミレ
